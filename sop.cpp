@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include<iostream>
+using namespace std;
 int p(int n)
 {
     int i,x=1;
@@ -20,15 +21,17 @@ int p(int n)
 int main()
 {
    int n,i;
-   scanf("%d",&n);
-   for(i=2;i<n/2;i++)
+   std::cout<<"enter a positive integer:  ";
+   std::cin>>n;
+   for(i=2;i<=n/2;i++)
    {
        if(p(i)==1)
        {
            if(p(n-i)==1)
            {
-               printf("%d=%d+%d\n",n,i,n-i);
+               cout << n << " = " << i << " + " << n-i << endl;
            }
        }
    }
- }
+   
+}
